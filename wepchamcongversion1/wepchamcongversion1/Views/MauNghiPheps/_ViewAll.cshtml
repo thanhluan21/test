@@ -1,0 +1,81 @@
+﻿@model IEnumerable<wepchamcongversion1.Models.MauNghiPhep>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenMauNghiPhep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YeuCauPheDuyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioiHanNgayNghi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThoiHanXuLy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoNgayTruocNgayNghi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioiHanSoNgayNghi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuiDinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Xoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLoaiNghiPhepNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaQuyTrinhPheDuyetNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenMauNghiPhep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YeuCauPheDuyet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GioiHanNgayNghi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThoiHanXuLy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoNgayTruocNgayNghi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GioiHanSoNgayNghi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuiDinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Xoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLoaiNghiPhepNavigation.MaLoaiNghiPhep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaQuyTrinhPheDuyetNavigation.MaQuyTrinhPheDuyet)
+                </td>
+                <td>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","MauNghiPheps",new { id=item.MaMauNghiPhep },Context.Request.Scheme)','Chỉnh Sữa')" class="btn btn-success">Edit</a> |
+                    <form asp-action="Delete" asp-route-id="@item.MaMauNghiPhep" onsubmit="return jQueryAjaxDelete(this);"class="d-inline">
+                        <input type="submit" value="Xóa" class="btn btn-danger" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,227 @@
+﻿@model wepchamcongversion1.Models.MauNghiPhep
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+@*<div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddOrEdit" asp-route-id="@Model.MaMauNghiPhep" onsubmit="return jQueryAjaxPost(this)" autocomplete="off">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <label asp-for="MaMauNghiPhep" class="control-label"></label>
+                    <input asp-for="MaMauNghiPhep" class="form-control" />
+                    <span asp-validation-for="MaMauNghiPhep" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="TenMauNghiPhep" class="control-label"></label>
+                            <input asp-for="TenMauNghiPhep" class="form-control" />
+                            <span asp-validation-for="TenMauNghiPhep" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="MaLoaiNghiPhep" class="control-label"></label>
+                            <select asp-for="MaLoaiNghiPhep" class="form-control" asp-items="ViewBag.MaLoaiNghiPhep"></select>
+                            <span asp-validation-for="MaLoaiNghiPhep" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="form-group">
+                    <label asp-for="MaLoaiNghiPhep" class="control-label"></label>
+                    <select asp-for="MaLoaiNghiPhep" class="form-control" asp-items="ViewBag.MaLoaiNghiPhep"></select>
+                    <span asp-validation-for="MaLoaiNghiPhep" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="YeuCauPheDuyet" class="control-label"></label>
+                    <input asp-for="YeuCauPheDuyet" class="form-control" />
+                    <span asp-validation-for="YeuCauPheDuyet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaQuyTrinhPheDuyet" class="control-label"></label>
+                    <select asp-for="MaQuyTrinhPheDuyet" class="form-control" asp-items="ViewBag.MaQuyTrinhPheDuyet"></select>
+                    <span asp-validation-for="MaQuyTrinhPheDuyet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GioiHanNgayNghi" class="control-label"></label>
+                    <input asp-for="GioiHanNgayNghi" class="form-control" />
+                    <span asp-validation-for="GioiHanNgayNghi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ThoiHanXuLy" class="control-label"></label>
+                    <input asp-for="ThoiHanXuLy" class="form-control" />
+                    <span asp-validation-for="ThoiHanXuLy" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SoNgayTruocNgayNghi" class="control-label"></label>
+                    <input asp-for="SoNgayTruocNgayNghi" class="form-control" />
+                    <span asp-validation-for="SoNgayTruocNgayNghi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GioiHanSoNgayNghi" class="control-label"></label>
+                    <input asp-for="GioiHanSoNgayNghi" class="form-control" />
+                    <span asp-validation-for="GioiHanSoNgayNghi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="QuiDinh" class="control-label"></label>
+                    <input asp-for="QuiDinh" class="form-control" />
+                    <span asp-validation-for="QuiDinh" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Xoa" class="control-label"></label>
+                    <input asp-for="Xoa" class="form-control" />
+                    <span asp-validation-for="Xoa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.MaMauNghiPhep" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <label asp-for="MaMauNghiPhep" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                <input asp-for="MaMauNghiPhep" class="form-control" />
+                <span asp-validation-for="MaMauNghiPhep" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="TenMauNghiPhep" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="TenMauNghiPhep" class="form-control" />
+                        <span asp-validation-for="TenMauNghiPhep" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="MaLoaiNghiPhep" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <select asp-for="MaLoaiNghiPhep" class="form-control" asp-items="ViewBag.TenLoaiNghiPhep"></select>
+                        <span asp-validation-for="MaLoaiNghiPhep" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="YeuCauPheDuyet" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="YeuCauPheDuyet" class="form-control" />
+                        <span asp-validation-for="YeuCauPheDuyet" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="MaQuyTrinhPheDuyet" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <div class="input-group">
+                            <select asp-for="MaQuyTrinhPheDuyet" class="form-control" asp-items="ViewBag.TenQuyTrinhPheDuyet"></select>
+                        </div>
+                        <span asp-validation-for="MaQuyTrinhPheDuyet" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="GioiHanNgayNghi" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="GioiHanNgayNghi" class="form-control" />
+                        <span asp-validation-for="GioiHanNgayNghi" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="GioiHanSoNgayNghi" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="GioiHanSoNgayNghi" class="form-control" />
+                        <span asp-validation-for="GioiHanSoNgayNghi" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @*<div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Xoa" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="Xoa" class="form-control" />
+                        <span asp-validation-for="Xoa" class="text-danger"></span>
+                    </div>
+                </div>*@
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="SoNgayTruocNgayNghi" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                        <input asp-for="SoNgayTruocNgayNghi" class="form-control" />
+                        <span asp-validation-for="SoNgayTruocNgayNghi" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuiDinh" class="control-label" style="font-weight:700;font-size:15px;"></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">#</div>
+                    </div>
+                    <input asp-for="QuiDinh" class="form-control" />
+                </div>
+                <span asp-validation-for="QuiDinh" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">    
+                    <input type="submit" value="Save" class="btn btn-primary btn-block" /> 
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.MaMauNghiPhep" onsubmit="return jQueryAjaxPost(this);" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaMauNghiPhep" class="control-label"></label>
+                <input asp-for="MaMauNghiPhep" class="form-control" />
+                <span asp-validation-for="MaMauNghiPhep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenMauNghiPhep" class="control-label"></label>
+                <input asp-for="TenMauNghiPhep" class="form-control" />
+                <span asp-validation-for="TenMauNghiPhep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaLoaiNghiPhep" class="control-label"></label>
+                <select asp-for="MaLoaiNghiPhep" class="form-control" asp-items="ViewBag.TenLoaiNghiPhep"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaQuyTrinhPheDuyet" class="control-label"></label>
+                <select asp-for="MaQuyTrinhPheDuyet" class="form-control" asp-items="ViewBag.TenQuyTrinhPheDuyet"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuiDinh" class="control-label"></label>
+                <input asp-for="QuiDinh" class="form-control" />
+                <span asp-validation-for="QuiDinh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+*@
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

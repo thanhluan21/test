@@ -1,0 +1,17 @@
+﻿@model IEnumerable<wepchamcongversion1.Models.MauNghiPhep>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+<p>
+    <a onclick="showInPopup('@Url.Action("AddOrEdit","MauNghiPheps",null,Context.Request.Scheme)','Tạo Mẫu Nghỉ Phép')" class="btn btn-success">Create New</a>
+</p>
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAll", Model)
+</div>
+
